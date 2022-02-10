@@ -1,0 +1,33 @@
+{
+  "name": "p3_poniatowski_juliette_ocr",
+  "version": "1.0.0",
+  "description": "project 3 css",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Popy49/poniatowskijuliette_3_08022022.git"
+  },
+  "keywords": [
+    "project",
+    "3",
+    "ocr",
+    "js",
+    "css",
+    "sass"
+  ],
+  "author": "Juliette Poniatowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Popy49/poniatowskijuliette_3_08022022/issues"
+  },
+  "homepage": "https://github.com/Popy49/poniatowskijuliette_3_08022022#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  },
+  "dependencies": {
+    "sass": "^1.49.7"
+  }
+}

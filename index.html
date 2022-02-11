@@ -14,19 +14,62 @@
 </head>
 <body>
     <header>
-        <nav></nav>
-        <div class="logo"></div>
-        <h1>lala</h1>
+        <nav><i class="header__nav fas fa-arrow-left"></i></nav>
+        <div class="header__logo logo"><img src="assets/logo/ohmyfood.png" alt="Logo"></div>
+
     </header>
 
     <main>
-        <section id="localisation"></section>
-        <section id="presentation"></section>
-        <section id="fonctionnement"></section>
-        <section id="liste-restaurants"></section>
+        <section id="localisation">
+            <i class="localisation__logo fas fa-map-marker-alt"></i>
+            <div class="localisation__texte">Paris, Belleville</div>
+        </section>
+
+        <section id="presentation">
+            <h1>Réservez le menu qui vous convient</h1>
+            <h2>Découvrez des restaurants d'exception, séléctionnés par nos soins.</h2>
+            <button>Explorer nos restaurants</button>
+        </section>
+
+        <section id="fonctionnement">
+            <h1>Fonctionnement</h1>
+            <div class="fonctionnement-liste">
+                <div class="fonctionnement-card">
+                    <div class="fonctionnement-card__puce">1</div>
+                    <div class="fonctionnement-card__logo"><i class="fas fa-mobile"></i></div>
+                    <div class="fonctionnement-card__texte">Choisissez votre restaurant</div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="liste-restaurants">
+            <h1>Restaurants</h1>
+            <div class="restaurants">
+                <a href="#" class="card">
+                    <div class="card__bandeau--disabled">Nouveau</div>
+                    <div class="card__image"><img src="" alt="Photo de présentation du restaurant"></div>
+                    <div class="card__infos">
+                        <div class="card__infos__texte">
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <div class="card__infos__like"><i class="fas fa-heart"></i></div>
+                    </div>
+                </a>
+            </div>
+        </section>
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="footer__logo">ohmyfood</div>
+        <ul class="footer__liste">
+            <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
+            <li><i class="fas fa-handshake"></i>Devenir partenaire</li>
+            <li>Mentions légales</li>
+            <li>Contact</li>
+        </ul>
+    </footer>
     
 </body>
 </html>

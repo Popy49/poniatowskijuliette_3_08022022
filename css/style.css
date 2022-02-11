@@ -12,6 +12,10 @@ a {
   color: black;
 }
 
+li {
+  list-style-type: none;
+}
+
 .header {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
@@ -29,6 +33,35 @@ a {
 }
 .header__logo > img {
   width: 170px;
+}
+
+.footer {
+  background-color: #383838;
+  color: white;
+  padding: 20px;
+}
+.footer__logo {
+  font-family: Shrikhand, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+.footer__liste {
+  padding: 0;
+}
+.footer__liste i {
+  width: 10px;
+  font-size: 10px;
+  margin-right: 10px;
+}
+.footer__liste li {
+  margin-top: 7px;
+}
+
+@media screen and (min-width: 767px) {
+  .footer__liste {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 100px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

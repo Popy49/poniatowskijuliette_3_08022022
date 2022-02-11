@@ -1,4 +1,14 @@
+@import "utils/variables.scss";
+// @import "base.scss";
+@import "layouts/header.scss";
+@import "layouts/footer.scss";
+
+@import "pages/accueil/localisation.scss";
+@import "pages/accueil/presentation.scss";
+@import "pages/accueil/fonctionnement.scss";
+@import "pages/accueil/liste-restaurants.scss";
+
 body {
-    background-color: rgb(66, 201, 127);
+    background-color: $primary-color;
   }
   

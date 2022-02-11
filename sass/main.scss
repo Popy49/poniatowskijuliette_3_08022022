@@ -1,5 +1,5 @@
 @import "utils/variables.scss";
-// @import "base.scss";
+@import "base/global.scss";
 @import "layouts/header.scss";
 @import "layouts/footer.scss";
 
@@ -8,7 +8,3 @@
 @import "pages/accueil/fonctionnement.scss";
 @import "pages/accueil/liste-restaurants.scss";
 
-body {
-    background-color: $primary-color;
-  }
-  

@@ -1,0 +1,20 @@
+.presentation{
+    text-align: center;
+    background-color: $primary-background-color;
+    padding:40px 30px;
+    h1{
+        margin: auto;
+        max-width: 250px;
+    }
+    h2{
+        margin-bottom: 30px;
+    }
+}
+
+
+@media screen and (min-width: 767px){
+    .presentation{
+        h1{
+            max-width: 100%;
+        }
+}}

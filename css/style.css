@@ -16,6 +16,20 @@ li {
   list-style-type: none;
 }
 
+h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+button {
+  border: none;
+}
+
 .header {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
@@ -63,6 +77,15 @@ li {
     margin-right: 100px;
   }
 }
+.btn {
+  padding: 15px 20px;
+  border-radius: 50px;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  font-weight: 500;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
 .localisation {
   background-color: #eaeaea;
   display: flex;
@@ -77,6 +100,25 @@ li {
   margin-bottom: auto;
   font-weight: 900;
   margin-right: 20px;
+}
+
+.presentation {
+  text-align: center;
+  background-color: #F7F7F7;
+  padding: 40px 30px;
+}
+.presentation h1 {
+  margin: auto;
+  max-width: 250px;
+}
+.presentation h2 {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 767px) {
+  .presentation h1 {
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

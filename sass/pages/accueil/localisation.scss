@@ -1,0 +1,15 @@
+.localisation{
+    background-color: darken($color: $primary-background-color, $amount: 5);
+    display: flex;
+    justify-content: center;
+    color: darken($color: $primary-background-color, $amount: 75);
+    &__logo{
+        margin: 15px 15px 15px 0;
+    }
+    &__texte{
+        margin-top: auto;
+        margin-bottom: auto;
+        font-weight: 900;
+        margin-right: 20px;
+    }
+}

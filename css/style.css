@@ -63,5 +63,20 @@ li {
     margin-right: 100px;
   }
 }
+.localisation {
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  color: #383838;
+}
+.localisation__logo {
+  margin: 15px 15px 15px 0;
+}
+.localisation__texte {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: 900;
+  margin-right: 20px;
+}
 
 /*# sourceMappingURL=style.css.map */

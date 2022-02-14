@@ -1,0 +1,51 @@
+#fonctionnement{
+    h1{
+        margin-bottom: 20px;
+    }
+}
+
+.bandeau{
+    background-color: $primary-background-color;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    justify-content: center;
+    border-radius: 20px;
+    margin-left: 10px;
+    @include primary-box-shadow;
+    margin-bottom: 15px;
+    
+    &:hover{
+        background-color: lighten($color: adjust-hue($color: $primary-color, $degrees: 320), $amount: 35);
+
+        .bandeau__logo{
+            color: $primary-color;
+        }
+    }
+    
+    &__puce{
+        color: white;
+        text-align: center;
+        font-size: 15px;
+        background-color:$primary-color;
+        border-radius: 50px;
+        width: 19px;
+        position: absolute;
+        left: -10px;
+        padding-top: 2px;
+    }
+    &__logo{
+        color: darken($color: $primary-background-color, $amount: 40);
+        position: absolute;
+        left: 30px;
+        font-size: 15px;
+
+
+    }
+    
+    &__texte{
+        font-weight: 500;
+    }
+}
+

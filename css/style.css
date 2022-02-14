@@ -30,6 +30,10 @@ button {
   border: none;
 }
 
+main {
+  margin: 40px 20px;
+}
+
 .header {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
@@ -119,6 +123,48 @@ button {
   .presentation h1 {
     max-width: 100%;
   }
+}
+#fonctionnement h1 {
+  margin-bottom: 20px;
+}
+
+.bandeau {
+  background-color: #F7F7F7;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  justify-content: center;
+  border-radius: 20px;
+  margin-left: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  margin-bottom: 15px;
+}
+.bandeau:hover {
+  background-color: #eaedfb;
+}
+.bandeau:hover .bandeau__logo {
+  color: #9356DC;
+}
+.bandeau__puce {
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  background-color: #9356DC;
+  border-radius: 50px;
+  width: 19px;
+  position: absolute;
+  left: -10px;
+  padding-top: 2px;
+}
+.bandeau__logo {
+  color: #919191;
+  position: absolute;
+  left: 30px;
+  font-size: 15px;
+}
+.bandeau__texte {
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=style.css.map */

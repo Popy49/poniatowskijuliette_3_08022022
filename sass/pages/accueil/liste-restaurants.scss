@@ -2,3 +2,13 @@
     background-color:$primary-background-color;
     padding: 40px 20px;//faire une facto avec le margin du main
 }
+
+
+@media screen and (min-width: 767px){
+    .restaurants{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+

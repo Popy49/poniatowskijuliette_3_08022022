@@ -1,7 +1,9 @@
 .card {
     border-radius: 20px;
     position: relative;
-    margin-bottom: 20px;
+    margin: 0 3px 20px 3px;
+    min-width: 300px;
+    
     @include primary-box-shadow;
     &__bandeau{
         position: absolute;
@@ -40,7 +42,19 @@
         &__texte>*{
             margin: 0;
             margin-bottom: 10px;
+            
         }
     }
 }
 
+@media screen and (max-width: 957px){
+    .card{
+        min-width: 360px;
+    }
+}
+
+@media screen and (max-width: 460px){
+    .card{
+        min-width: 100px;
+    }
+}

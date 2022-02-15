@@ -32,14 +32,28 @@
     &__logo{
         color: darken($color: $primary-background-color, $amount: 40);
         position: absolute;
-        left: 30px;
+        left: 10%;
         font-size: 15px;
-
-
     }
     
     &__texte{
         font-weight: 500;
+        white-space: nowrap;
     }
 }
 
+@media screen and (min-width: 767px){
+    .fonctionnement-liste{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .bandeau{
+        padding-left: 40px;
+        padding-right: 20px;
+        &__logo{
+            left:20px
+        }
+    }
+}

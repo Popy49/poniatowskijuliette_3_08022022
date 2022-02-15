@@ -128,7 +128,8 @@ main {
 .card {
   border-radius: 20px;
   position: relative;
-  margin-bottom: 20px;
+  margin: 0 3px 20px 3px;
+  min-width: 300px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 .card__bandeau {
@@ -171,6 +172,16 @@ main {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 957px) {
+  .card {
+    min-width: 360px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .card {
+    min-width: 100px;
+  }
+}
 .localisation {
   background-color: #eaeaea;
   display: flex;
@@ -237,16 +248,40 @@ main {
 .bandeau__logo {
   color: #919191;
   position: absolute;
-  left: 30px;
+  left: 10%;
   font-size: 15px;
 }
 .bandeau__texte {
   font-weight: 500;
+  white-space: nowrap;
 }
 
+@media screen and (min-width: 767px) {
+  .fonctionnement-liste {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .bandeau {
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+  .bandeau__logo {
+    left: 20px;
+  }
+}
 #liste-restaurants {
   background-color: #F7F7F7;
   padding: 40px 20px;
+}
+
+@media screen and (min-width: 767px) {
+  .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

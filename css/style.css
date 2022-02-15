@@ -128,6 +128,7 @@ main {
 .card {
   border-radius: 20px;
   position: relative;
+  margin-bottom: 20px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 .card__bandeau {

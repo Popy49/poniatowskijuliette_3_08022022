@@ -1,6 +1,7 @@
 .card {
     border-radius: 20px;
     position: relative;
+    margin-bottom: 20px;
     @include primary-box-shadow;
     &__bandeau{
         position: absolute;

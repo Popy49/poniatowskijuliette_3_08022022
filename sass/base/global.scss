@@ -8,6 +8,7 @@ body{
 
 a {
     color: black;
+    text-decoration: none;
 }
 
 li{
@@ -17,6 +18,7 @@ li{
 h1{
     font-size: 22px;
     margin: 0;
+    margin-bottom: 20px;
 }
 
 h2{
@@ -26,6 +28,7 @@ h2{
 
 button{
     border: none;
+    background-color: transparent;
 }
 
 main{

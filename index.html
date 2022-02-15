@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link href='http://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto:light,regular,medium,bold' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Ohmyfood!</title>
 </head>
@@ -51,23 +51,27 @@
             </div>
         </section>
 
-        <section id="liste-restaurants">
-            <h1>Restaurants</h1>
-            <div class="restaurants">
-                <a href="#" class="card">
-                    <div class="card__bandeau--disabled">Nouveau</div>
-                    <div class="card__image"><img src="" alt="Photo de présentation du restaurant"></div>
-                    <div class="card__infos">
-                        <div class="card__infos__texte">
-                            <h3>La palette du goût</h3>
-                            <p>Ménilmontant</p>
-                        </div>
-                        <div class="card__infos__like"><i class="fas fa-heart"></i></div>
-                    </div>
-                </a>
-            </div>
-        </section>
+        
     </main>
+
+    <section id="liste-restaurants">
+        <h1>Restaurants</h1>
+        <div class="restaurants">
+
+            <div class="card">
+                <div class="card__bandeau">Nouveau</div>
+                <div class="card__image"><img src="assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo de présentation du restaurant"></div>
+                <div class="card__infos">
+                    <div class="card__infos__texte">
+                        <h3>La palette du goût</h3>
+                        <p>Ménilmontant</p>
+                    </div>
+                    <button class="card__infos__like"><i class="card__infos__like fa fa-heart"></i></button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="footer__logo">ohmyfood</div>

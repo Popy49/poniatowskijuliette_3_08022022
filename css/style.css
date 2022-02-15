@@ -10,6 +10,7 @@ body {
 
 a {
   color: black;
+  text-decoration: none;
 }
 
 li {
@@ -19,6 +20,7 @@ li {
 h1 {
   font-size: 22px;
   margin: 0;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -28,6 +30,7 @@ h2 {
 
 button {
   border: none;
+  background-color: transparent;
 }
 
 main {
@@ -90,6 +93,83 @@ main {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
+.fa-heart {
+  color: #000;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.fa-heart:hover {
+  color: white;
+}
+
+.fa-heart::after {
+  position: absolute;
+  content: "\f004";
+  font-weight: 900;
+  top: -1;
+  right: 0;
+  bottom: 0;
+  left: -1;
+  background-image: linear-gradient(170deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+
+.fa-heart:hover::after {
+  opacity: 1;
+  z-index: 2;
+  font-size: 30px;
+}
+
+.card {
+  border-radius: 20px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.card__bandeau {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  padding: 5px 10px;
+  border-radius: 2px;
+  background-color: #99E2D0;
+  color: #278870;
+}
+.card__bandeau--disabled {
+  display: none;
+}
+.card__image {
+  height: 150px;
+  overflow: hidden;
+}
+.card__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.card__infos {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 20px 10px 20px;
+}
+.card__infos__like {
+  font-size: 30px;
+  margin-bottom: auto;
+  font-weight: 500;
+}
+.card__infos__texte > * {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
 .localisation {
   background-color: #eaeaea;
   display: flex;
@@ -124,10 +204,6 @@ main {
     max-width: 100%;
   }
 }
-#fonctionnement h1 {
-  margin-bottom: 20px;
-}
-
 .bandeau {
   background-color: #F7F7F7;
   display: flex;
@@ -165,6 +241,11 @@ main {
 }
 .bandeau__texte {
   font-weight: 500;
+}
+
+#liste-restaurants {
+  background-color: #F7F7F7;
+  padding: 40px 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

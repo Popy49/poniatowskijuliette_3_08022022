@@ -76,6 +76,9 @@ main {
 .footer__liste li {
   margin-top: 7px;
 }
+.footer__liste a {
+  color: white;
+}
 
 @media screen and (min-width: 767px) {
   .footer__liste {

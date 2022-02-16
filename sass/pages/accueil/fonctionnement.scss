@@ -57,3 +57,10 @@
         }
     }
 }
+
+@media screen and (min-width: 1270px){
+    .fonctionnement-liste{
+        justify-content: flex-start;
+        gap: 60px;
+    }
+}

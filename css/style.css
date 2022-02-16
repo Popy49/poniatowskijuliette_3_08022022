@@ -182,6 +182,11 @@ main {
     min-width: 100px;
   }
 }
+@media screen and (min-width: 2000px) {
+  .card {
+    min-width: 450px;
+  }
+}
 .localisation {
   background-color: #eaeaea;
   display: flex;
@@ -269,6 +274,12 @@ main {
   }
   .bandeau__logo {
     left: 20px;
+  }
+}
+@media screen and (min-width: 1270px) {
+  .fonctionnement-liste {
+    justify-content: flex-start;
+    gap: 60px;
   }
 }
 #liste-restaurants {

@@ -49,6 +49,12 @@
         justify-content: space-between;
     }
 
+    main{
+        // margin: 40px 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .bandeau{
         padding-left: 40px;
         padding-right: 20px;
@@ -59,8 +65,8 @@
 }
 
 @media screen and (min-width: 1270px){
-    .fonctionnement-liste{
-        justify-content: flex-start;
-        gap: 60px;
+
+    main{
+        margin: 40px 300px;
     }
 }

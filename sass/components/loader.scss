@@ -1,0 +1,46 @@
+.loader {
+    position : fixed;
+    z-index: 9999;
+    // background : url('icon-loader.gif') 50% 50% no-repeat;
+    background-color: aquamarine;
+    top : 0px;
+    left : 0px;
+    height : 100%;
+    width : 100%;
+    // cursor : wait;
+    &__spin{
+        margin: auto;
+        width: 5px;
+        height: 50px;
+        background-color: black;
+        // &:hover{
+        //     transform: rotate(20deg) ;
+        //     transform-origin: 0 100px;
+        //     animation-delay: 250ms;
+        // }
+        animation: turn-bar 1000ms;
+    }
+}
+
+@keyframes turn-bar {  
+0% {
+    transform: rotate(70deg) ;
+    transform-origin: 0 100px;
+}
+17% {
+    transform: rotate(140deg) ;
+    transform-origin: 0 100px;;
+}
+24% {
+    transform: rotate(210deg) ;
+    transform-origin: 0 100px;
+}
+46% {
+    transform: rotate(280deg) ;
+    transform-origin: 0 100px;
+}
+100% {
+    transform: rotate(360deg) ;
+    transform-origin: 0 100px;
+}
+}

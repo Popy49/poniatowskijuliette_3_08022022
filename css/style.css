@@ -93,9 +93,8 @@ main {
   background: linear-gradient(170deg, #FF79DA, #9356DC);
   font-weight: 500;
   color: white;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 20px -3px, rgba(0, 0, 0, 0.05) 0px 4px 10px -2px;
 }
-
 .fa-heart {
   color: #000;
   position: relative;
@@ -134,7 +133,7 @@ main {
   margin: 0 3px 20px 3px;
   min-width: 300px;
   display: block;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 20px -3px, rgba(0, 0, 0, 0.05) 0px 4px 10px -2px;
 }
 .card__bandeau {
   position: absolute;
@@ -192,27 +191,39 @@ main {
   }
 }
 .bande {
-  background-color: #f07fff;
   display: flex;
   justify-content: space-between;
   border-radius: 15px;
+  overflow: hidden;
+  max-width: 350px;
+  margin-bottom: 15px;
+  align-self: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 20px -3px, rgba(0, 0, 0, 0.05) 0px 4px 10px -2px;
 }
 .bande__titre {
   margin-top: auto;
   margin-bottom: auto;
+  margin-left: 15px;
+  width: 300px;
+  transition: width 400ms linear;
 }
 .bande__titre h4, .bande__titre p {
   margin: 0;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .bande__titre h4 {
   font-size: 18px;
   margin-bottom: 5px;
 }
 .bande__titre p {
-  font-size: 15px;
+  font-size: 16px;
 }
 .bande__check {
-  transform: scale(0, 1);
+  transform: translateX(80px);
+  transition: transform 400ms linear;
   transform-origin: right;
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
@@ -220,27 +231,56 @@ main {
   color: white;
   font-size: 22px;
   text-align: center;
-  width: 60px;
+  width: 65px;
   height: 65px;
   line-height: 65px;
   white-space: nowrap;
 }
 .bande__prix {
   font-weight: 900;
-  margin-right: 10px;
+  margin-right: -40px;
   align-self: flex-end;
   margin-bottom: 12px;
+  transition: transform 400ms ease-in-out;
+}
+.bande:hover .bande__titre {
+  width: 210px;
+  transition: width 400ms linear;
+}
+.bande:hover .bande__titre h4, .bande:hover .bande__titre p {
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.bande:hover .bande__prix {
+  transform: translateX(-30px);
+  transition: transform 400ms ease-in-out;
+  transition-delay: 50ms;
 }
 .bande:hover .bande__check {
-  transform: scaleX(1);
+  transform: translateX(0);
   transform-origin: right;
-  transition: transform 330ms ease-in-out;
+  transition: transform 400ms linear;
 }
 .bande:hover .bande__check i {
   transform: rotate(1turn);
-  transition: transform 330ms ease-in-out;
+  transition: transform 400ms ease-in-out;
 }
 
+@media screen and (max-width: 370px) {
+  .bande h4, .bande p {
+    font-size: small;
+  }
+  .bande__titre {
+    transition: width 650ms linear;
+  }
+  .bande:hover .bande__titre {
+    width: 150px;
+    transition: width 300ms linear;
+  }
+}
 .localisation {
   background-color: #eaeaea;
   display: flex;
@@ -284,7 +324,7 @@ main {
   justify-content: center;
   border-radius: 20px;
   margin-left: 10px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 20px -3px, rgba(0, 0, 0, 0.05) 0px 4px 10px -2px;
   margin-bottom: 15px;
 }
 .bandeau:hover {
@@ -322,6 +362,11 @@ main {
     justify-content: space-between;
   }
 
+  main {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .bandeau {
     padding-left: 40px;
     padding-right: 20px;
@@ -331,9 +376,8 @@ main {
   }
 }
 @media screen and (min-width: 1270px) {
-  .fonctionnement-liste {
-    justify-content: flex-start;
-    gap: 60px;
+  main {
+    margin: 40px 300px;
   }
 }
 #liste-restaurants {
@@ -373,6 +417,29 @@ main {
   margin-bottom: auto;
   font-weight: 100;
   font-size: 25px;
+}
+.menu__liste {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.menu__liste h3 {
+  font-weight: 100;
+  position: relative;
+}
+.menu__liste h3::after {
+  content: " ";
+  width: 40px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  border-bottom: 3px solid #99E2D0;
+}
+.menu__liste__detail {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */

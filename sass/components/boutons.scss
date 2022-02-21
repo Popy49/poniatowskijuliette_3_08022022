@@ -5,4 +5,8 @@
     font-weight: 500;
     color: white;
     @include primary-box-shadow;
+
+    &:hover{
+        
+    }
 }

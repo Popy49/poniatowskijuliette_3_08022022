@@ -1,14 +1,16 @@
-#liste-restaurants{
-    background-color:$primary-background-color;
-    padding: 40px 20px;//faire une facto avec le margin du main
+#liste-restaurants {
+  background-color: $primary-background-color;
+  padding: 40px 20px;
 }
 
-
-@media screen and (min-width: 767px){
-    .restaurants{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+.restaurants {
+  @include tablet-desk-only {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
+.margin-desk {
+  @include reducted-width-center;
+}

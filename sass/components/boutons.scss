@@ -1,12 +1,15 @@
-.btn{
-    padding: 15px 20px;
-    border-radius: 50px;
-    background: linear-gradient(170deg,$secondary-color, $primary-color);
-    font-weight: 500;
-    color: white;
-    @include primary-box-shadow;
+.btn {
+  padding: 15px 20px;
+  border-radius: 50px;
+  background: $gradient;
+  font-weight: 500;
+  color: white;
+  box-shadow: $light-shadow;
+  opacity: 1;
 
-    &:hover{
-        
-    }
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    box-shadow: $dark-shadow;
+  }
 }

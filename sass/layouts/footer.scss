@@ -10,6 +10,11 @@
 
     &__liste{
         padding: 0;
+        @include tablet-desk-only {
+            display: flex;
+            justify-content: space-between;
+        }
+
         i{
             width: 10px;
             font-size: 10px;
@@ -20,17 +25,6 @@
         }
         a{
             color: white;
-        }
-    }
-}
-
-
-@media screen and (min-width: 767px){
-    .footer{
-        &__liste{
-            display: flex;
-            justify-content: space-between;
-            margin-right: 100px;
         }
     }
 }

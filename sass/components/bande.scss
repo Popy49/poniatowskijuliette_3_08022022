@@ -1,102 +1,111 @@
-.bande{
-        display: flex;
-        justify-content: space-between;
-        border-radius: 15px;
-        overflow: hidden;
-        max-width: 350px;
-        margin-bottom: 15px;
-        align-self: center;
-        @include primary-box-shadow;
-        &__titre{
-            margin-top: auto;
-            margin-bottom: auto;
-            margin-left: 15px;
-            width:300px;
-            transition: width 400ms linear;
+$bande-width: 350px;
 
-            h4, p{
-                margin:0;
-                text-overflow: ellipsis;
-                display: block;
-                overflow: hidden;
-                white-space: nowrap
-            }
-            h4 {
-                font-size: 18px;
-                margin-bottom: 5px;
-            }
-            p{
-                font-size: 16px;
-            }
-        }
-        &__check{
-            transform: translateX(80px);
-            transition: transform 400ms linear;
-            transform-origin: right;
-            background-color: $tertiary-color;
-            border-radius: 0 15px 15px 0;
-            height: 63px;
-            color: white;
-            font-size: 22px;
-            text-align: center;
-            width: 65px;
-            height: 65px; 
-            line-height: 65px; 
-            white-space: nowrap;
-        }
-        &__prix{
-            font-weight: 900;
-            margin-right: -40px;
-            align-self: flex-end;
-            margin-bottom: 12px;
-            transition: transform 400ms ease-in-out;
-        }
-    
-        &:hover{
-            .bande{
-                &__titre{
-                    width:210px;
-                    transition: width 400ms linear;
-                    h4, p{
-                        text-overflow: ellipsis;
-                        display: block;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                    }
-                }
-                &__prix{
-                    transform: translateX(-30px);
-                    transition: transform 400ms ease-in-out;
-                    transition-delay: 50ms;
-                }
-                &__check{
-                    transform: translateX(0);
-                    transform-origin: right ;
-                    transition: transform 400ms linear;
-                    i{
-                        transform: rotate(1turn);
-                        transition: transform 400ms ease-in-out;
-                    }
-                }
-            }
-        }
+.bande {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: $bande-width;
+  margin-bottom: 15px;
+  box-shadow: $light-shadow;
+  &__titre {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15px;
+    width: 300px;
+    transition: width 400ms linear;
+    overflow: hidden;
+    h4,
+    p {
+      margin: 0;
+      text-overflow: ellipsis;
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    h4 {
+      font-size: 18px;
+      margin-bottom: 5px;
+      @include mobile-only {
+        font-size: small;
+      }
+    }
+    p {
+      font-size: $font-size-medium;
+      @include mobile-only {
+        font-size: small;
+      }
     }
 
-    @media screen and (max-width: 370px){
-        .bande{
-            h4, p{
-                font-size: small;
-            }
-            &__titre{
-                transition: width 650ms linear;
-            }
-            &:hover{
-                .bande{
-                    &__titre{
-                        width:150px;
-                        transition: width 300ms linear;
-                    }}
-        }
-    }}
+    @include mobile-only {
+      transition: width 650ms linear;
+    }
+  }
+  &__check {
+    transform: translateX(80px);
+    transition: transform 400ms linear;
+    transform-origin: right;
+    background-color: $tertiary-color;
+    height: 63px;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    white-space: nowrap;
+  }
+  &__prix {
+    font-weight: 900;
+    font-size: $font-size-medium;
+    margin-right: -50px;
+    align-self: flex-end;
+    margin-bottom: 12px;
+    transition: transform 400ms ease-in-out;
+    @include mobile-only {
+      margin-right: -40px;
+    }
+  }
 
+  @include tablet-desk-only {
+    justify-content: space-between;
+  }
+
+  &:hover {
+    .bande {
+      &__titre {
+        width: $bande-width - 140px;
+        transition: width 400ms linear;
+        @include mobile-only {
+          width: $bande-width - 200px;
+          transition: width 300ms linear;
+        }
+        h4,
+        p {
+          text-overflow: ellipsis;
+          display: block;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+      &__prix {
+        transform: translateX(-30px);
+        transition: transform 400ms ease-in-out;
+        transition-delay: 50ms;
+        @include mobile-only {
+          transition-delay: 0ms;
+        }
+      }
+      &__check {
+        transform: translateX(2px);
+        transform-origin: right;
+        transition: transform 400ms linear;
+        i {
+          transform: rotate(1turn);
+          transition: transform 400ms ease-in-out;
+        }
+      }
+    }
+  }
+}

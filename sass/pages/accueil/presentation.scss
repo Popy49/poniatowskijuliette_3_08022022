@@ -5,16 +5,11 @@
     h1{
         margin: auto;
         max-width: 250px;
+        @include tablet-desk-only {
+            max-width: 100%;
+        }
     }
     h2{
         margin-bottom: 30px;
     }
 }
-
-
-@media screen and (min-width: 767px){
-    .presentation{
-        h1{
-            max-width: 100%;
-        }
-}}

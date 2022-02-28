@@ -1,66 +1,53 @@
 .card {
-    border-radius: 20px;
-    position: relative;
-    margin: 0 3px 20px 3px;
-    min-width: 300px;
-    display: block;
-    @include primary-box-shadow;
-    &__bandeau{
-        position: absolute;
-        top:20px;
-        right: 10px;
-        font-size: 15px;
-        font-weight: 500;
-        letter-spacing: -1px;
-        padding: 5px 10px;
-        border-radius: 2px;
-        background-color: $tertiary-color;
-        color: darken($color: $tertiary-color, $amount: 40);
-        &--disabled{
-            display: none;
-        }
+  border-radius: 20px;
+  position: relative;
+  margin: 0 3px 20px 3px;
+  display: block;
+  background-color: white;
+  box-shadow: $light-shadow;
+  @include desk-only {
+    width: 480px;
+  }
+  @include tablet-desk-only {
+    min-width: 350px;
+  }
+  &__bandeau {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    font-size: $font-size-medium;
+    font-weight: 500;
+    letter-spacing: -1px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    background-color: $tertiary-color;
+    color: darken($tertiary-color, 40);
+    &--disabled {
+      display: none;
     }
-    &__image{
-        height: 150px;
-        overflow: hidden;
-        img{
-            height:100%;
-            width:100%;
-            object-fit: cover;
-            border-radius: 15px 15px 0 0 ;
-        }
+  }
+  &__image {
+    height: 150px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
     }
-    &__infos{
-        display: flex;
-        justify-content: space-between;
-        margin: 10px 20px 10px 20px;
-        &__like{
-            font-size: 30px;
-            margin-bottom: auto;
-            font-weight: 500;
-        }
-        &__texte>*{
-            margin: 0;
-            margin-bottom: 10px;
-            
-        }
-    }
-}
+  }
 
-@media screen and (max-width: 957px){
-    .card{
-        min-width: 360px;
-    }
-}
+  &__like {
+    position: absolute;
+    right: 10px;
+    top: 85px;
+  }
 
-@media screen and (max-width: 460px){
-    .card{
-        min-width: 100px;
+  &__titre {
+    padding: 15px 20px 5px 15px;
+    > * {
+      margin: 0;
+      margin-bottom: 7px;
     }
-}
-
-@media screen and (min-width: 2000px){
-    .card{
-        min-width: 450px;
-    }
+  }
 }

@@ -1,3 +1,28 @@
-@mixin primary-box-shadow {
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+@mixin desk-only {
+  @media screen and (min-width: map-get($breakpoints, desk)) {
+    @content;
+  }
+}
+
+@mixin tablet-desk-only {
+  @media screen and (min-width: map-get($breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
+@mixin reducted-width-center {
+  @include tablet-desk-only {
+    max-width: $subwidth-medium;
+    margin: auto;
+  }
+  @include desk-only {
+    max-width: $subwidth-large;
+    margin: auto;
+  }
 }

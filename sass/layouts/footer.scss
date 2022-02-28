@@ -1,36 +1,30 @@
-.footer{
-    background-color: darken($color: $primary-background-color, $amount: 75);
-    color: white;
-    padding: 20px;
+.footer {
+  background-color: darken($color: $primary-background-color, $amount: 75);
+  color: white;
+  padding: 20px;
 
-    &__logo{
-        font-family: $title-font-family;
-        font-size: 18px;
+  &__logo {
+    font-family: $title-font-family;
+    font-size: 18px;
+  }
+
+  &__liste {
+    padding: 0;
+    @include tablet-desk-only {
+      display: flex;
+      justify-content: space-between;
     }
 
-    &__liste{
-        padding: 0;
-        i{
-            width: 10px;
-            font-size: 10px;
-            margin-right: 10px;
-        }
-        li{
-            margin-top: 7px;
-        }
-        a{
-            color: white;
-        }
+    i {
+      width: 10px;
+      font-size: 10px;
+      margin-right: 10px;
     }
-}
-
-
-@media screen and (min-width: 767px){
-    .footer{
-        &__liste{
-            display: flex;
-            justify-content: space-between;
-            margin-right: 100px;
-        }
+    li {
+      margin-top: 7px;
     }
+    a {
+      color: white;
+    }
+  }
 }

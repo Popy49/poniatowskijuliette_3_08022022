@@ -1,23 +1,22 @@
+.header {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0 2px 4px -1px;
 
+  nav {
+    position: absolute;
+    margin: 22px;
+    font-size: 20px;
+  }
 
-.header{
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    
-    nav{
-        position: absolute;
-        margin: 22px;
-        font-size: 20px;
+  &--disabled {
+    display: none;
+  }
+
+  &__logo {
+    padding: 20px 0 10px 0;
+    text-align: center;
+    > img {
+      width: 170px;
     }
-
-    &--disabled{
-        display: none;
-    }
-
-    &__logo{
-        padding: 20px 0 10px 0;
-        text-align: center;
-        >img{
-            width: 170px;
-        }
-    }
+  }
 }

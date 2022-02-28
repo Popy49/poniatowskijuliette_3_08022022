@@ -1,66 +1,76 @@
-.bandeau{
-    background-color: $primary-background-color;
+.bandeau {
+  background-color: $primary-background-color;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  justify-content: center;
+  border-radius: 20px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  box-shadow: $light-shadow;
+  @include tablet-desk-only {
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+
+  &:hover {
+    background-color: lighten(
+      $color: adjust-hue($color: $primary-color, $degrees: 320),
+      $amount: 35
+    );
+
+    .bandeau__logo {
+      color: $primary-color;
+    }
+  }
+
+  &__puce {
+    color: white;
+    text-align: center;
+    font-size: $font-size-medium;
+    background-color: $primary-color;
+    border-radius: 50px;
+    width: 19px;
+    position: absolute;
+    left: -10px;
+    padding-top: 2px;
+  }
+  &__logo {
+    color: darken($color: $primary-background-color, $amount: 40);
+    position: absolute;
+    left: 10%;
+    font-size: $font-size-medium;
+    @include tablet-desk-only {
+      left: 20px;
+    }
+  }
+
+  &__texte {
+    font-weight: 500;
+    white-space: nowrap;
+  }
+}
+
+.fonctionnement-liste {
+  @include tablet-desk-only {
     display: flex;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    position: relative;
-    justify-content: center;
-    border-radius: 20px;
-    margin-left: 10px;
-    @include primary-box-shadow;
-    margin-bottom: 15px;
-    
-    &:hover{
-        background-color: lighten($color: adjust-hue($color: $primary-color, $degrees: 320), $amount: 35);
-
-        .bandeau__logo{
-            color: $primary-color;
-        }
-    }
-    
-    &__puce{
-        color: white;
-        text-align: center;
-        font-size: 15px;
-        background-color:$primary-color;
-        border-radius: 50px;
-        width: 19px;
-        position: absolute;
-        left: -10px;
-        padding-top: 2px;
-    }
-    &__logo{
-        color: darken($color: $primary-background-color, $amount: 40);
-        position: absolute;
-        left: 10%;
-        font-size: 15px;
-    }
-    
-    &__texte{
-        font-weight: 500;
-        white-space: nowrap;
-    }
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
-@media screen and (min-width: 767px){
-    .fonctionnement-liste{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+// #fonctionnement {
+//   @include tablet-desk-only {
+//     max-width: $subwidth-medium;
+//     margin: auto;
+//   }
+//   @include desk-only {
+//     max-width: $subwidth-large;
+//     margin: auto;
+//   }
+// }
 
-    .bandeau{
-        padding-left: 40px;
-        padding-right: 20px;
-        &__logo{
-            left:20px
-        }
-    }
-}
-
-@media screen and (min-width: 1270px){
-    .fonctionnement-liste{
-        justify-content: flex-start;
-        gap: 60px;
-    }
+#fonctionnement {
+  @include reducted-width-center;
 }

@@ -125,10 +125,10 @@ main {
   position: absolute;
   content: "\f004";
   font-weight: 900;
-  top: -1;
+  top: -1px;
   right: 0;
   bottom: 0;
-  left: -1;
+  left: -1px;
   background-image: linear-gradient(170deg, #9356dc, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;

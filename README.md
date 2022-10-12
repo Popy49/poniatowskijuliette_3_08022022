@@ -14,5 +14,5 @@ It's a front-end application for menu reservation. Just use CSS with animation. 
 ## 3. Demo and preview
 You can see the demo : https://popy49.github.io/poniatowskijuliette_3_08022022/
 
-![Preview](./p7.png?raw=true "preview")
+![Preview](./p3.png?raw=true "preview")
 

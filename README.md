@@ -6,6 +6,7 @@ It's a front-end application for menu reservation. Just use CSS with animation. 
 ![HTML](https://img.shields.io/badge/Uses-HTML5-blue?raw=true "HTML")
 ![CSS](https://img.shields.io/badge/Uses-CSS3-purple?raw=true "CSS")
 ![Responsive](https://img.shields.io/badge/Uses-Responsive-blue?raw=true "Responsive")
+![animation](https://img.shields.io/badge/Uses-Animations-yellowgreen?raw=true "animation")
 
 ## 2. Project installation
 - Nothing to install, just clone the repository : https://github.com/Popy49/poniatowskijuliette_3_08022022.git
